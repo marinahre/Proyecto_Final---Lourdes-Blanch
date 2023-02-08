@@ -1,5 +1,4 @@
 # Tercera-pre-entrega---Lourdes-Blanch
-#Instrucciones
 
 
 # Mi proyecto es una página llamada "Cavern". Sirve para ver información sobre películas, series y libros, 
