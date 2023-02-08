@@ -1,0 +1,25 @@
+{% extends 'SPL/padre.html' %}
+
+{% load static %}
+
+{% block titulo %}
+
+    <h1 class="fw-bolder">Nuevo libro</h1>
+    <p class="lead">Ingresá la información del libro</p>
+
+{% endblock %}
+
+{% block sobreLaPagina %}
+
+    <form action="" method="POST">{% csrf_token %}
+
+     <table>
+
+        {{form3.as_table}}
+
+     </table>
+
+     <input type="submit" value="Enviar">
+
+    </form>
+{% endblock %}

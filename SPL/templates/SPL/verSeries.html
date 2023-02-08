@@ -1,0 +1,23 @@
+{% extends 'SPL/padre.html' %}
+
+{% load static %}
+
+{% block titulo %}
+
+    <h1 class="fw-bolder">Series</h1>
+    <p class="lead">Abajo podés ver las series publicadas en la página.</p>
+    <a class="btn btn-lg btn-light" href="{% url 'busquedaSeries' %}">Buscar series</a>
+
+{% endblock %}
+
+{% block sobreLaPagina %}
+    
+    <a class="btn btn-lg btn-warning" href="{% url 'agregar_serie' %}">Agregá tu serie favorita</a>
+
+    {% for serie in todas_series %}
+
+    <p><li><strong>{{serie.nombre}}</strong>. Género: {{serie.genero}}. Director: {{serie.director}}. {{serie.año}}.</li></p>
+
+    {% endfor %}
+
+{% endblock %}

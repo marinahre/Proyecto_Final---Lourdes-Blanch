@@ -1,0 +1,23 @@
+{% extends 'SPL/padre.html' %}
+
+{% load static %}
+
+{% block titulo %}
+
+    <h1 class="fw-bolder">Películas</h1>
+    <p class="lead">Abajo podés ver las pelis publicadas en la página.</p>
+    <a class="btn btn-lg btn-light" href="#about">Buscar películas</a>
+
+{% endblock %}
+
+{% block sobreLaPagina %}
+
+    <a class="btn btn-lg btn-warning" href="{% url 'agregar_peli' %}">Agregá tu peli favorita</a>
+
+    {% for peli in todas_pelis %}
+
+    <p><li><strong>{{peli.nombre}}</strong>. Género: {{peli.genero}}. Director: {{peli.director}}. {{peli.año}}</li></p>
+
+    {% endfor %}
+
+{% endblock %}

@@ -1,0 +1,23 @@
+{% extends 'SPL/padre.html' %}
+
+{% load static %}
+
+{% block titulo %}
+
+    <h1 class="fw-bolder">Libros</h1>
+    <p class="lead">Abajo podés ver los libros publicadas en la página.</p>
+    <a class="btn btn-lg btn-light" href="#about">Buscar libros</a>
+
+{% endblock %}
+
+{% block sobreLaPagina %}
+
+    <a class="btn btn-lg btn-warning" href="{% url 'agregar_libro' %}">Agregá tu libro favorito</a>
+
+    {% for libro in todos_libros %}
+
+    <p><li><strong>{{libro.nombre}}</strong>. Género: {{libro.genero}}. Autor: {{libro.autor}}. {{libro.año}}</li></p>
+
+    {% endfor %}
+
+{% endblock %}

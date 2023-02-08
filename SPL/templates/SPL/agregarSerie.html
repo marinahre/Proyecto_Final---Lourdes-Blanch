@@ -1,0 +1,25 @@
+{% extends 'SPL/padre.html' %}
+
+{% load static %}
+
+{% block titulo %}
+
+    <h1 class="fw-bolder">Nueva serie</h1>
+    <p class="lead">Ingresá la información de la serie</p>
+
+{% endblock %}
+
+{% block sobreLaPagina %}
+
+    <form action="" method="POST">{% csrf_token %}
+
+     <table>
+
+        {{form1.as_table}}
+
+     </table>
+
+     <input type="submit" value="Enviar">
+
+    </form>
+{% endblock %}
