@@ -15,6 +15,7 @@ urlpatterns = [
     path('series/', verSeries, name="Series"),
     path('peliculas/', verPelis, name="Pelis"),
     path('libros/', verLibros, name="Libros"),
+    path('infoseries/', masInfoSeries, name="infoseries"),
 
     #Agregar
     path('nuevaserie/', agregarSerie, name="agregar_serie"),

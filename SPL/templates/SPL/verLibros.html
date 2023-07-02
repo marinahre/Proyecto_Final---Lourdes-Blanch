@@ -17,11 +17,12 @@
     {% for libro in todos_libros %}
 
         <p><li><strong>{{libro.nombre}}</strong>. Género: {{libro.genero}}. Autor: {{libro.autor}}. {{libro.año}}</li>
-
+            <a href="{% url 'infoseries' %}">Ver más</a>
+        <p>
         <a href="{% url 'eliminarlibro' libro.nombre %}">Eliminar libro</a>
         <a href="{% url 'editar libro' libro.nombre %}">Editar libro</a>
         
-        </p> 
+        </p> </p> 
 
     {% endfor %}
 

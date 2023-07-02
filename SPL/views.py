@@ -258,3 +258,7 @@ def editar_libro(request, libro_nombre):
                                                "año": libro_elegido.año})
 
     return render(request, "SPL/editarlibro.html", {"form3": miFormulario})
+
+def masInfoSeries(request):
+
+    return render(request, 'SPL/masinfoseries.html')

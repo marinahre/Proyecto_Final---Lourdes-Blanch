@@ -17,10 +17,11 @@
     {% for peli in todas_pelis %}
 
         <p><li><strong>{{peli.nombre}}</strong>. Género: {{peli.genero}}. Director: {{peli.director}}. {{peli.año}}</li>
-        <button type="button" class="btn btn-link">Ver más</s></button>
+            <a href="{% url 'infoseries' %}">Ver más</a>
         <p>
         <a href="{% url 'eliminarpeli' peli.nombre %}">Eliminar película</a>
         <a href="{% url 'editar peli' peli.nombre %}">Editar película</a>
+        
         </p> </p>
 
     {% endfor %}
