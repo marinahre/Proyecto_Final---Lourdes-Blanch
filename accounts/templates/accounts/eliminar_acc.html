@@ -1,0 +1,20 @@
+{% extends 'SPL/padre.html' %}
+
+{% load static %}
+
+{% block titulo %}
+
+    <h1 class="fw-bolder">Eliminar cuenta</h1>
+
+{% endblock %}
+
+{% block sobreLaPagina %}
+
+    <form action="{% url 'eliminar_perfil' object.id %}" method="POST" class="m-2">
+
+        {% csrf_token %}
+        <p>¿Desea eliminar su cuenta?</p>
+        <input type="submit" value="Confirmar" class="btn btn-primary">
+
+    </form>
+{% endblock %}

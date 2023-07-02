@@ -11,14 +11,13 @@
 
 {% block sobreLaPagina %}
 
-    {% if series %}
+    {% if libros %}
 
     <ul>
-    {% for serie in series %}
-        <li> {{serie.nombre}} </li>
+    {% for libro in libros %}
+        <li> {{libro.nombre}} </li>
     {% endfor %}
     </ul>
     {% endif %}
 
 {% endblock %}
-

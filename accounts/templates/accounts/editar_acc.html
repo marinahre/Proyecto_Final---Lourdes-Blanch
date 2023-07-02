@@ -1,0 +1,20 @@
+{% extends 'SPL/padre.html' %}
+
+{% load static %}
+
+{% block titulo %}
+
+    <h1 class="fw-bolder">Editar perfil</h1>
+
+{% endblock %}
+
+{% block sobreLaPagina %}
+
+    <form method="POST" class="m-2" enctype='multipart/form-data'>
+        
+        {% csrf_token %}
+        {{form.as_p}}
+        <input type="submit" value="Aceptar" class="btn btn-warning">
+
+    </form>
+{% endblock %}

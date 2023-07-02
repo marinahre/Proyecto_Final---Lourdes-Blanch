@@ -6,7 +6,7 @@
 
     <h1 class="fw-bolder">Libros</h1>
     <p class="lead">Abajo podés ver los libros publicadas en la página.</p>
-    <a class="btn btn-lg btn-light" href="#about">Buscar libros</a>
+    <a class="btn btn-lg btn-light" href="{% url 'busquedaLibro' %}">Buscar libros</a>
 
 {% endblock %}
 
@@ -16,7 +16,12 @@
 
     {% for libro in todos_libros %}
 
-    <p><li><strong>{{libro.nombre}}</strong>. Género: {{libro.genero}}. Autor: {{libro.autor}}. {{libro.año}}</li></p>
+        <p><li><strong>{{libro.nombre}}</strong>. Género: {{libro.genero}}. Autor: {{libro.autor}}. {{libro.año}}</li>
+
+        <a href="{% url 'eliminarlibro' libro.nombre %}">Eliminar libro</a>
+        <a href="{% url 'editar libro' libro.nombre %}">Editar libro</a>
+        
+        </p> 
 
     {% endfor %}
 

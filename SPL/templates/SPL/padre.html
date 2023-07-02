@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
     <head>
 
         {% load static %}
@@ -20,9 +20,17 @@
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav ms-auto">
-                        <li class="nav-item"><a class="nav-link" href="{% url 'Series' %}">Series</a></li>
-                        <li class="nav-item"><a class="nav-link" href="{% url 'Pelis' %}">Películas</a></li>
-                        <li class="nav-item"><a class="nav-link" href="{% url 'Libros' %}">Libros</a></li>
+                        {% if request.user.is_authenticated %}
+                            <li class="nav-item"><a class="nav-link" href="{% url 'Series' %}">Series</a></li>
+                            <li class="nav-item"><a class="nav-link" href="{% url 'Pelis' %}">Películas</a></li>
+                            <li class="nav-item"><a class="nav-link" href="{% url 'Libros' %}">Libros</a></li>
+                            <li class="nav-item"><a class="nav-link" href="{% url 'profile' %}">Perfil</a></li>
+                            <li class="nav-item"><a class="nav-link" href="{% url 'logout' %}">Cerrar sesión</a></li>
+                        {% else %}
+                            <li class="nav-item"><a class="nav-link" href="{% url 'register' %}">Registrarse</a></li>
+                            <li class="nav-item"><a class="nav-link" href="{% url 'login' %}">Iniciar sesión</a></li>
+                        {% endif %}
+                        <li class="nav-item"><a class="nav-link" href="{% url 'sobremi' %}">About</a></li>
                     </ul>
                 </div>
             </div>

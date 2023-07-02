@@ -6,7 +6,7 @@
 
     <h1 class="fw-bolder">Películas</h1>
     <p class="lead">Abajo podés ver las pelis publicadas en la página.</p>
-    <a class="btn btn-lg btn-light" href="#about">Buscar películas</a>
+    <a class="btn btn-lg btn-light" href="{% url 'busquedaPeli' %}">Buscar películas</a>
 
 {% endblock %}
 
@@ -16,7 +16,12 @@
 
     {% for peli in todas_pelis %}
 
-    <p><li><strong>{{peli.nombre}}</strong>. Género: {{peli.genero}}. Director: {{peli.director}}. {{peli.año}}</li></p>
+        <p><li><strong>{{peli.nombre}}</strong>. Género: {{peli.genero}}. Director: {{peli.director}}. {{peli.año}}</li>
+        <button type="button" class="btn btn-link">Ver más</s></button>
+        <p>
+        <a href="{% url 'eliminarpeli' peli.nombre %}">Eliminar película</a>
+        <a href="{% url 'editar peli' peli.nombre %}">Editar película</a>
+        </p> </p>
 
     {% endfor %}
 

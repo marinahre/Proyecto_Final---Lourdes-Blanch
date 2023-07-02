@@ -1,0 +1,20 @@
+{% extends 'SPL/padre.html' %}
+
+{% load static %}
+
+{% block titulo %}
+
+    <h1 class="fw-bolder">Buscar peli</h1>
+    <p class="lead">Acá podés buscar pelis por nombre</p>
+
+{% endblock %}
+
+{% block sobreLaPagina %}
+
+<form action="resultadoPeli/" method="GET">
+
+    <input type="text" name="nombre" id="nombre">
+    <input type="submit" value="Buscar">
+
+</form>
+{% endblock %}

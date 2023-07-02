@@ -11,11 +11,11 @@
 
 {% block sobreLaPagina %}
 
-    {% if series %}
+    {% if pelis %}
 
     <ul>
-    {% for serie in series %}
-        <li> {{serie.nombre}} </li>
+    {% for peli in pelis %}
+        <li> {{peli.nombre}} </li>
     {% endfor %}
     </ul>
     {% endif %}

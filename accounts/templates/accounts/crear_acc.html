@@ -1,0 +1,21 @@
+{% extends 'SPL/padre.html' %}
+
+{% load static %}
+
+{% block titulo %}
+
+    <h1 class="fw-bolder">Registro</h1>
+    <p class="lead">Llená el formulario de abajo para registrar tu cuenta</p>
+
+{% endblock %}
+
+{% block sobreLaPagina %}
+
+    <form method="POST" class="m-2">
+        
+        {% csrf_token %}
+        {{formulario.as_p}}
+        <input type="submit" value="Registrarse" class="btn btn-warning">
+
+    </form>
+{% endblock %}

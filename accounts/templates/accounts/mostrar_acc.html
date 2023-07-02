@@ -1,0 +1,20 @@
+{% extends 'SPL/padre.html' %}
+
+{% load static %}
+
+{% block titulo %}
+    <h1 class="fw-bolder">Mostrar perfil</h1>
+    <a class="btn btn-lg btn-light" href="{% url 'edit profile' %}">Editar perfil</a>
+{% endblock %}
+
+{% block sobreLaPagina %}
+    <div class="row">
+        <div class="card m-2" style="width: 18rem;">
+            <div class="card-body">
+            <h5 class="card-title">{{ request.user.first_name }} {{ request.user.last_name }}</h5>
+            <p class="card-text">Email: {{ request.user.email }}</p>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

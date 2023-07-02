@@ -16,7 +16,12 @@
 
     {% for serie in todas_series %}
 
-    <p><li><strong>{{serie.nombre}}</strong>. Género: {{serie.genero}}. Director: {{serie.director}}. {{serie.año}}.</li></p>
+        <p><li><strong>{{serie.nombre}}</strong>. Género: {{serie.genero}}. Director: {{serie.director}}. {{serie.año}}.</li>
+
+        <a href="{% url 'eliminarserie' serie.nombre %}">Eliminar serie</a>
+        <a href="{% url 'editar serie' serie.nombre %}">Editar serie</a> 
+        
+        </p>
 
     {% endfor %}
 
