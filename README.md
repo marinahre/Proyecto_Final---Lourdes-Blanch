@@ -6,3 +6,5 @@
 http://localhost:8000/SPL/
 Una vez en la página de inicio, si se quiere ver todas las funciones de la página, habrá que registrarse e iniciar sesión y luego se podrá nevegar libremente por la página
 """
+
+# NOTA: En el repo aparece que contribuyó una segunda cuenta de GitHub, mi expareja usó un tiempo mi PC para programar mientras yo hacía mi proyecto, así que algunos cambios quedaron a su nombre, pero fue hecho 100% por mí.
