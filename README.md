@@ -1,4 +1,4 @@
-# Tercera-pre-entrega---Lourdes-Blanch
+# Proyecto final / Lourdes Blanch
 
 
 """  Mi proyecto se llama "Cavern", es una página en la que podés ver acerca de películas, series y libros, a la vez que agregar, editar y borrar esa información; todo esto estando logueado.
